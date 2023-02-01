@@ -1,0 +1,108 @@
+
+#em-placeholder {
+
+    width: max-content;
+    height: max-content;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2000000000 !important;
+
+    display: flex;
+    flex-flow: column;
+    pointer-events: none;
+}
+
+/*
+    Styling em-chat
+*/
+
+
+#em-chat {
+    border: none;
+
+    pointer-events: all;
+    position: relative;
+    top: 3rem;
+    opacity: 0;
+    transition: 0.2s opacity, 0.2s top;
+}
+
+.em-chat-anim {
+    position: relative !important;
+    top: 0 !important;
+    opacity: 1 !important;
+}
+
+/* Styling for smaller devices */
+@media only screen and (max-width: 460px) {
+
+    #em-chat {
+        width: 100vw;
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+
+    }
+
+    .chat-close {
+        display: flex;
+    }
+
+    .hidden-controller {
+        display: none;
+    }
+}
+
+/* Styling for lager screen  devices */
+@media only screen and (min-width: 460px) {
+
+    #em-chat {
+        width: 370px;
+        height: calc(90vh - 3rem);
+
+        position: relative;
+        bottom: 1rem;
+        right: 1rem;;
+    }
+
+    .hidden-controller {
+        display: block;
+    }
+
+    .chat-close {
+        display: none !important;
+    }
+}
+
+#em-chat-control {
+
+    width: 64px;
+    height: 64px;
+
+    margin-left: auto;
+    margin-top: 1em;
+    pointer-events: all;
+    border: none;
+
+    position: relative;
+    bottom: 1rem;
+    right: 1rem;
+
+
+}
+
+
+/*
+    Helper CSS Classes
+*/
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.zero-heigh {
+    height: 0px !important;
+}

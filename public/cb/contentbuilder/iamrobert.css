@@ -1,0 +1,57 @@
+/*
+ *	=======================================================================
+	+ iamrobert content builder | FIXES
+	  -----------------------------------------------------------------------
+    
+ *	=======================================================================
+ */
+/* + RULES
+	======================================================================*/
+/* + SET MAIN HEIGHT
+	======================================================================*/
+#contentarea {
+  margin-top: 90px; }
+
+/* + TURN OFF ANIMATIONS
+	======================================================================*/
+div#contentarea .row .columns *, div#contentarea .cell * {
+  /*CSS transitions*/
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  /*CSS transforms*/
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  /*CSS animations*/
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  opacity: 1 !important; }
+
+/* + TOOLBAR FONT SIZES
+	======================================================================*/
+.rte-paragraph-options h1 {
+  font-size: 40px; }
+
+.rte-paragraph-options h2 {
+  font-size: 30px; }
+
+.rte-paragraph-options h3 {
+  font-size: 24px; }
+
+.rte-paragraph-options h4 {
+  font-size: 20px; }
+
+.rte-paragraph-options h5, .rte-paragraph-options h6 {
+  font-size: 17px;
+  text-transform: uppercase; }
+
+.rte-paragraph-options p {
+  font-size: 16px; }

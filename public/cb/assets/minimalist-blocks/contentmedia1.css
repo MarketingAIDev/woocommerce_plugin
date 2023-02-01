@@ -1,0 +1,414 @@
+
+@media all and (max-width: 1024px) {
+	.size-12 span {
+		font-size:12px
+}
+	.size-14 span {
+		font-size:14px
+}
+	.size-16 span {
+		font-size:16px
+}
+	.size-18 span {
+		font-size:18px
+}
+	.size-21 span {
+		font-size:21px
+}
+	.size-24 span {
+		font-size:24px
+}
+	.size-28 span {
+		font-size:28px
+}
+	.size-32 span {
+		font-size:32px
+}
+	.size-35 span {
+		font-size:35px
+}
+	.size-38 span {
+		font-size:36px
+}
+	.size-42 span {
+		font-size:42px
+}
+	.size-46 span {
+		font-size:46px
+}
+	.size-48 span {
+		font-size:48px
+}
+	.size-50 span {
+		font-size:50px
+}
+	.size-54 span {
+		font-size:54px
+}
+	.size-60 span {
+		font-size:60px
+}
+	.size-64 span {
+		font-size:64px
+}
+	.size-68 span {
+		font-size:68px
+}
+	.size-72 span {
+		font-size:72px
+}
+	.size-76 span {
+		font-size:73px
+}
+	.size-80 span {
+		font-size:74px
+}
+	.size-84 span {
+		font-size:75px
+}
+	.size-88 span {
+		font-size:76px
+}
+	.size-92 span {
+		font-size:77px
+}
+	.size-96 span {
+		font-size:78px
+}
+	.size-100 span {
+		font-size:79px
+}
+	.size-104 span {
+		font-size:80px
+}
+	.size-108 span {
+		font-size:81px
+}
+	.size-112 span {
+		font-size:82px
+}
+	.size-116 span {
+		font-size:84px
+}
+	.size-120 span {
+		font-size:85px
+}
+	.size-124 span {
+		font-size:86px
+}
+	.size-128 span {
+		font-size:87px
+}
+	.size-132 span {
+		font-size:88px
+}
+	.size-136 span {
+		font-size:89px
+}
+	.size-140 span {
+		font-size:90px
+}
+	.size-144 span {
+		font-size:91px
+}
+	.size-148 span {
+		font-size:92px
+}
+	.size-152 span {
+		font-size:93px
+}
+	.size-156 span {
+		font-size:94px
+}
+	.size-160 span {
+		font-size:95px
+}
+	.size-164 span {
+		font-size:96px
+}
+	.size-168 span {
+		font-size:97px
+}
+	.size-172 span {
+		font-size:98px
+}
+	.size-176 span {
+		font-size:99px
+}
+	.size-180 span {
+		font-size:100px
+}
+	.size-184 span {
+		font-size:111px
+}
+	.size-188 span {
+		font-size:112px
+}
+	.size-192 span {
+		font-size:113px
+}
+	.size-196 span {
+		font-size:114px
+}
+	.size-200 span {
+		font-size:115px
+}
+	.size-204 span {
+		font-size:116px
+}
+	.size-208 span {
+		font-size:117px
+}
+	.size-212 span {
+		font-size:118px
+}
+	.size-216 span {
+		font-size:119px
+}
+	.size-220 span {
+		font-size:120px
+}
+}
+@media all and (max-width: 640px) {
+	.size-12 span {
+		font-size:12px
+}
+	.size-14 span {
+		font-size:14px
+}
+	.size-16 span {
+		font-size:16px
+}
+	.size-18 span {
+		font-size:18px
+}
+	.size-21 span {
+		font-size:21px
+}
+	.size-24 span {
+		font-size:22px
+}
+	.size-28 span {
+		font-size:24px
+}
+	.size-32 span {
+		font-size:26px
+}
+	.size-35 span {
+		font-size:28px
+}
+	.size-38 span {
+		font-size:30px
+}
+	.size-42 span {
+		font-size:32px
+}
+	.size-46 span {
+		font-size:34px
+}
+	.size-48 span {
+		font-size:36px
+}
+	.size-50 span {
+		font-size:36px
+}
+	.size-54 span {
+		font-size:36px
+}
+	.size-60 span {
+		font-size:36px
+}
+	.size-64 span {
+		font-size:36px
+}
+	.size-68 span {
+		font-size:36px
+}
+	.size-72 span {
+		font-size:36px
+}
+	.size-76 span {
+		font-size:36px
+}
+	.size-80 span {
+		font-size:36px
+}
+	.size-84 span {
+		font-size:36px
+}
+	.size-88 span {
+		font-size:36px
+}
+	.size-92 span {
+		font-size:36px
+}
+	.size-96 span {
+		font-size:36px
+}
+	.size-100 span {
+		font-size:36px
+}
+	.size-104 span {
+		font-size:36px
+}
+	.size-108 span {
+		font-size:36px
+}
+	.size-112 span {
+		font-size:36px
+}
+	.size-116 span {
+		font-size:36px
+}
+	.size-120 span {
+		font-size:36px
+}
+	.size-124 span {
+		font-size:36px
+}
+	.size-128 span {
+		font-size:36px
+}
+	.size-132 span {
+		font-size:36px
+}
+	.size-136 span {
+		font-size:36px
+}
+	.size-140 span {
+		font-size:36px
+}
+	.size-144 span {
+		font-size:36px
+}
+	.size-148 span {
+		font-size:36px
+}
+	.size-152 span {
+		font-size:36px
+}
+	.size-156 span {
+		font-size:36px
+}
+	.size-160 span {
+		font-size:36px
+}
+	.size-164 span {
+		font-size:36px
+}
+	.size-168 span {
+		font-size:36px
+}
+	.size-172 span {
+		font-size:36px
+}
+	.size-176 span {
+		font-size:36px
+}
+	.size-180 span {
+		font-size:36px
+}
+	.size-184 span {
+		font-size:36px
+}
+	.size-188 span {
+		font-size:36px
+}
+	.size-192 span {
+		font-size:36px
+}
+	.size-196 span {
+		font-size:36px
+}
+	.size-200 span {
+		font-size:36px
+}
+	.size-204 span {
+		font-size:36px
+}
+	.size-208 span {
+		font-size:36px
+}
+	.size-212 span {
+		font-size:36px
+}
+	.size-216 span {
+		font-size:36px
+}
+	.size-220 span {
+		font-size:36px
+}
+}
+@media all and (max-width: 1024px) {
+	.margin-left-1024-reset {
+		margin-left:0px;
+	}
+	.margin-right-1024-reset {
+		margin-right:0px;
+	}
+}
+@media all and (max-width: 1024px) {
+	.letter-spacing-25 {
+		letter-spacing:5px
+}
+	.letter-spacing-24 {
+		letter-spacing:5px
+}
+	.letter-spacing-23 {
+		letter-spacing:5px
+}
+	.letter-spacing-22 {
+		letter-spacing:5px
+}
+	.letter-spacing-21 {
+		letter-spacing:5px
+}
+	.letter-spacing-20 {
+		letter-spacing:5px
+}
+	.letter-spacing-19 {
+		letter-spacing:5px
+}
+	.letter-spacing-18 {
+		letter-spacing:5px
+}
+	.letter-spacing-17 {
+		letter-spacing:5px
+}
+	.letter-spacing-16 {
+		letter-spacing:5px
+}
+	.letter-spacing-15 {
+		letter-spacing:5px
+}
+	.letter-spacing-14 {
+		letter-spacing:5px
+}
+	.letter-spacing-13 {
+		letter-spacing:5px
+}
+	.letter-spacing-12 {
+		letter-spacing:5px
+}
+	.letter-spacing-11 {
+		letter-spacing:5px
+}
+	.letter-spacing-10 {
+		letter-spacing:5px
+}
+	.letter-spacing-9 {
+		letter-spacing:5px
+}
+	.letter-spacing-8 {
+		letter-spacing:4px
+}
+	.letter-spacing-7 {
+		letter-spacing:4px
+}
+	.letter-spacing-6 {
+		letter-spacing:3px
+}
+	.letter-spacing-5 {
+		letter-spacing:3px
+}
+}

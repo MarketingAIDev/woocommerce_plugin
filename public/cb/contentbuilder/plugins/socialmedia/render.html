@@ -1,0 +1,434 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/cb/assets/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <title></title>
+
+    <style>
+        html {
+            overflow: hidden;
+            font-family: Open Sans, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #d8d8d8;
+        }
+
+        .body {
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-grow: 1;
+            overflow: auto;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .inpElmTrash {
+            all: unset;
+            cursor: pointer;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            /* background-color: #d8d8d8; */
+            padding: 10px;
+            cursor: pointer;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgb(199, 199, 199);
+        }
+
+        .header input[type="text"] {
+            height: 30px;
+            background-color: transparent;
+        }
+
+        .is-settings {
+            /* display: flex; */
+            /* gap: 5px; */
+            /* width: 150px; */
+        }
+
+        .is-settings>div {
+            margin: 5px 0;
+        }
+
+        input[type=text] {
+            width: 100%;
+            height: 35px;
+            box-sizing: border-box;
+            margin: 0;
+            font-family: sans-serif;
+            /* font-size: 19px; */
+            letter-spacing: 1px;
+            padding: 0;
+            padding-left: 8px;
+            color: #333;
+            display: inline-block;
+            border: 1px solid rgb(199, 199, 199);
+            border-radius: 0;
+            background-color: #fff;
+        }
+
+        input[type=number] {
+            width: 100%;
+            height: 35px;
+            box-sizing: border-box;
+            margin: 0;
+            font-family: sans-serif;
+            /* font-size: 19px; */
+            letter-spacing: 1px;
+            padding: 0;
+            padding-left: 8px;
+            color: #333;
+            display: inline-block;
+            border: 1px solid rgb(199, 199, 199);
+            border-radius: 0;
+            background-color: #fff;
+        }
+
+        input[type="color"] {
+            padding: 0;
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgb(199, 199, 199);
+            cursor: pointer;
+        }
+
+        input[type="color"]::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+
+        input[type="color"]::-webkit-color-swatch {
+            border: none;
+        }
+
+        .is-settings input[type=text] {
+            border-radius: 0;
+            height: 35px;
+            font-size: 14px;
+            width: 50px;
+        }
+        
+        .is-settings input[type=number] {
+            border-radius: 0;
+            height: 35px;
+            font-size: 14px;
+            width: 50px;
+        }
+
+        select {
+            margin: 0 0 10px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            height: 35px;
+            line-height: 1.7;
+            color: #454545;
+            border-radius: 5px;
+            border: none;
+            background-color: #eee;
+            width: auto;
+            display: inline-block;
+            background-image: none;
+            -webkit-appearance: menulist;
+            -moz-appearance: menulist;
+            appearance: menulist;
+            padding: 0 5px;
+        }
+
+        .inpElmIcon {
+            all: unset;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            border: 1px solid rgb(199, 199, 199);
+            cursor: pointer;
+        }
+
+        #inpElmColor,
+        .inpElmOrderUp,
+        .inpElmOrderDown {
+            height: 35px;
+            width: 35px;
+        }
+
+        .is-settings select {
+            border-radius: 0;
+            height: 35px;
+            margin: 0;
+        }
+
+        .options {
+            border: 1px solid rgb(199, 199, 199);
+            border-top: none;
+            margin-top: -6px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .interactive {
+            display: flex;
+        }
+
+        .fullText {
+            width: 250px !important;
+        }
+
+        .icons-popup {
+            max-width: 300px;
+            /* height: 250px; */
+            background-color: white;
+            border: solid 2px gainsboro;
+            position: absolute;
+            top: 0;
+            left: 50px;
+            z-index: 1100;
+        }
+
+        #divIcons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 9px 11px 9px 9px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        #divIcons>div {
+            width: 30px;
+            height: 37px;
+            line-height: 37px;
+            font-size: 14px;
+            color: #111111;
+            cursor: pointer;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        #divIcons>div:hover {
+            background: #f5f5f5;
+        }
+
+        .footer {
+            width: 100%;
+        }
+
+        .footer button {
+            width: 100%;
+            height: 35px;
+            height: 50px;
+            line-height: 1;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            background-color: #fff;
+            color: #4a4a4a;
+            border: 1px solid transparent;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            border-radius: 0;
+            transition: all ease 0.3s;
+            padding-left: 10px;
+            padding-right: 10px;
+            min-width: 135px;
+            background: #f7f7f7;
+        }
+
+        .size-align {
+            display: flex;
+            justify-content: center;
+        }
+
+        tr {
+            font-size: 13px;
+        }
+
+
+        /* custom scroll bars */
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: 8px;
+            scrollbar-height: 8px;
+            scrollbar-color: rgb(162, 162, 162) #eee;
+            overflow-x: visible;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #eee;
+            /* border-radius: 20px; */
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: rgb(162, 162, 162);
+            /* border-radius: 20px; */
+            border: 3px solid #eee;
+        }
+        .inpElmBGColor.disabled{
+            cursor: not-allowed;
+            position: relative;
+            background-color: #fff!important;
+        }
+        .inpElmBGColor.disabled::after,.inpElmBGColor.disabled::before{
+            position: absolute;
+            content: '';
+            background: red;
+            display: block;
+            width: 100%;
+            height: 3px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .inpElmBGColor.disabled::after {
+            -webkit-transform: rotate(45deg);  
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <div id="socialmediacontroller-container" class="container">
+        <div class="body">
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Icon</th>
+                    <!-- <th>color</th> -->
+                    <th id="table-bg-header">Icon color</th>
+                    <th id="table-bg-header">BG color</th>
+                    <th>Link</th>
+                    <th></th>
+                </thead>
+                <tbody class="table-body">
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <button id="addnew-button">Add New</button>
+        </div>
+    </div>
+    <div id="icons-popup" class="icons-popup" style="visibility: hidden;">
+        <div id="divIcons">
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/mail-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/skype-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/linkedin-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/insta-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/fb-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/tw-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/pintrest-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/yt-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="round"><img src="/cb/assets/social-icons/small/tt-round.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/mail-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/skype-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/linkedin-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/insta-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/fb-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/tw-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/pintrest-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/yt-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="square"><img src="/cb/assets/social-icons/small/tt-square.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/mail.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/skype.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/linkedin.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/insta.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/fb.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/tw.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/pintrest.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/yt.png"></div>
+            <div style="display: flex; justify-content: center; align-items:center" data-type="no-bg"><img src="/cb/assets/social-icons/small/tt.png"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const iconsPopup = document.getElementById('icons-popup');
+        let currentIconElement = null;
+        
+        window.onclick = function(event) {
+            if (event.target !== iconsPopup) {
+                iconsPopup.style.visibility = 'hidden';
+            }
+        }
+        document.querySelectorAll('#divIcons > div').forEach(i => {
+            i.addEventListener('click', function (e) {
+                //document.getElementById(currentIconElement.dataset.srcid).querySelector('img').src = currentIconElement.dataset.srcid
+                document.getElementById('icons-popup').style.visibility = 'hidden';
+                currentIconElement.querySelector('img').src = i.querySelector('img').src
+                // let iconElement = e.target;
+                // if (e.target.classList.length === 0) {
+                //     e.target.childNodes.forEach(c => {
+                //         if (c.classList.contains('icon')) {
+                //             iconElement = c;
+                //         }
+                //     });
+                // }
+                // let name = iconElement.className.split(' ')[1];
+                
+                //currentIconElement.innerHTML = `<i class="${[...iconElement.classList].join(' ')}"></i>`;
+                //e.target.src = i.src
+                currentIconElement.dispatchEvent(new CustomEvent('inpElmIconchange', { detail: i.querySelector('img').src.replace('/small',''),type: currentIconElement.type }));
+                currentIconElement = null;
+            });
+        });
+
+        document.showPopUp = function (event, element) {
+            let rect = element.getBoundingClientRect();
+            const popup = document.getElementById('icons-popup');
+            popup.style.top = rect.bottom.toString() + 'px';
+            popup.style.visibility = 'visible';
+            currentIconElement = element;
+            event.stopPropagation();
+        };
+
+        document.hidePopUp = function() {
+            document.getElementById('icons-popup').style.visibility = 'hidden';
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+"table_name": "automation2s",
+"data": [
+{"id":"1","uid":"60cd7be159509","name":"Test One","customer_id":"1","mail_list_id":"1","time_zone":"","status":"inactive","data":"[{\"title\":\"Review submitted\",\"id\":\"trigger\",\"type\":\"ElementTrigger\",\"options\":{\"key\":\"review-submitted\",\"init\":\"true\"},\"child\":1097552189},{\"title\":\"Send email `Mail 1`\",\"id\":1097552189,\"type\":\"ElementAction\",\"options\":{\"init\":\"true\",\"email_uid\":\"60cdf34671a5d\",\"template\":\"true\"},\"child\":1004355102},{\"title\":\"Has submitted a review?\",\"id\":1004355102,\"type\":\"ElementCondition\",\"options\":{\"key\":\"condition\",\"type\":\"review_submitted\",\"review_products_type\":\"all\"},\"childYes\":null,\"childNo\":null}]","created_at":"2020-01-01 00:00:00","updated_at":"2020-07-22 23:54:36","segment_id":null,"cache":"{\"SummaryStats\":{\"total\":2,\"involed\":0,\"complete\":0}}","last_error":null,"trigger_key":"review-submitted"}
+]
+}

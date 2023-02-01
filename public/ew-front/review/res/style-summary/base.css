@@ -1,0 +1,68 @@
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------- */
+.ew {
+    /*
+      CSS Reset ended
+  */
+
+    /*
+      CSS Utility Classes
+  */
+
+}
+.ew :host {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ew html,
+.ew body {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+.ew h1,
+.ew h2,
+.ew h3,
+.ew h4,
+.ew h5,
+.ew h6,
+.ew p,
+.ew blockquote,
+.ew address,
+.ew big,
+.ew cite,
+.ew code,
+.ew em,
+.ew font,
+.ew img,
+.ew small,
+.ew strike,
+.ew sub,
+.ew sup,
+.ew li,
+.ew ol,
+.ew ul,
+.ew fieldset,
+.ew form,
+.ew label,
+.ew legend,
+.ew button,
+.ew table,
+.ew caption,
+.ew tr,
+.ew th,
+.ew td {
+    line-height: inherit;
+    text-align: inherit;
+}
+.ew blockquote::before,
+.ew blockquote::after {
+    content: "";
+}
+.ew body,
+.ew html {
+    height: 100%;
+}

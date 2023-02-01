@@ -1,0 +1,130 @@
+.ew {
+    /* Quick View */
+
+    /*Overlay*/
+
+    /* Overides   .customer-review properties */
+
+    /* Wizard Alerts */
+
+    /* Theme styling for Error Alert Types */
+
+    /* Theme styling for Info Alert Types */
+
+    /*Animation Keyframes*/
+
+}
+.ew .ew-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #1b1a1a;
+    transition: background-color 0.2s linear;
+}
+.ew .ew-btn:hover {
+    background-color: #282828;
+    color: #ffffff;
+}
+.ew .customer-review {
+    border-color: #c7c4c4a1;
+}
+.ew .customer-review--review-date {
+    color: gray;
+}
+.ew .customer-review--customer-verified {
+    background-color: #000000;
+    color: #ffffff;
+}
+.ew .star-on {
+    color: #000000;
+}
+.ew .star-off {
+    color: #808080;
+}
+.ew .customer-review--item-type-label {
+    color: gray;
+}
+.ew .em-overlay {
+    background-color: #f0f0f0e6;
+}
+.ew .quikview-picture-nav-btn {
+    background-color: #0000004d;
+    color: white;
+}
+.ew .customer-review.quikview-review {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px 2px #cbcbcb;
+}
+.ew .socials-img {
+    background-color: #393939;
+    transition: background-color 0.2s linear;
+}
+.ew .socials-img:hover {
+    background-color: #8c8585;
+}
+.ew .quikview-review--close {
+    background: none;
+}
+.ew .review-wizard .slide {
+    position: relative;
+    animation: fadeIn 0.5s;
+}
+.ew .error-alert {
+    background-color: tomato;
+}
+.ew .error-alert .wizard-alert-icon {
+    background-image: url("/ew-front/review/all-reviews/res/image/alert/error.png");
+}
+.ew .error-alert .wizard-alert-message {
+    color: white;
+}
+.ew .error-alert .wizard-alert-close {
+    color: white;
+}
+.ew .info-alert {
+    background-color: #0848b7;
+}
+.ew .info-alert .wizard-alert-icon {
+    background-image: url("/ew-front/review/all-reviews/res/image/alert/info.png");
+}
+.ew .info-alert .wizard-alert-message {
+    color: white;
+}
+.ew .info-alert .wizard-alert-close {
+    color: white;
+}
+@keyframes fadeIn {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes wizardAlertAnimation {
+    0% {
+        position: relative;
+        right: -1rem;
+    }
+    100% {
+        position: relative;
+        right: 0;
+    }
+}
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes LoadingImageOverlayAmination {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}

@@ -1,0 +1,9 @@
+{
+"table_name":"languages",
+"data":[
+{"id":"1","uid":"5781b681c1b34","name":"English","code":"en","region_code":"us","status":"active","created_at":"2016-07-10 09:44:17","updated_at":"2016-07-10 09:44:17","is_default":"1"},
+{"id":"2","uid":"581b52d8acdca","name":"Spanish","code":"es","region_code":"es","status":"active","created_at":"2016-07-10 09:44:17","updated_at":"2016-07-10 09:44:17","is_default":"0"},
+{"id":"3","uid":"5e6f6197b038a","name":"Portuguese","code":"pt","region_code":"pt","status":"active","created_at":"2020-03-16 16:53:03","updated_at":"2020-03-16 16:53:03","is_default":"0"},
+{"id":"4","uid":"5e6f619833b0f","name":"German","code":"de","region_code":"de","status":"active","created_at":"2020-03-16 16:53:04","updated_at":"2020-03-16 16:53:04","is_default":"0"}
+]
+}

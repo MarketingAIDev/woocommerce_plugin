@@ -1,0 +1,7 @@
+{
+"table_name":"admins",
+"data":
+[
+{"id":"1","uid":"5e6f619adcb1d","user_id":"1","creator_id":null,"contact_id":null,"admin_group_id":"1","language_id":"1","first_name":"Ankit","last_name":"Srivastava","image":null,"timezone":"Asia\/Kolkata","status":"active","color_scheme":"","created_at":"2017-01-01 00:00:00","updated_at":"2020-08-14 02:09:54","text_direction":"ltr"}
+]
+}

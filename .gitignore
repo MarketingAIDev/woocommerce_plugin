@@ -1,0 +1,8 @@
+/.idea
+/.env
+node_modules
+vendor
+.DS_Store
+firebase_credentials.json
+public/**/*.webp
+storage/**/*.webp

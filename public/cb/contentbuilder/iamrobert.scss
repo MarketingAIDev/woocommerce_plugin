@@ -1,0 +1,73 @@
+/*
+ *	=======================================================================
+	+ iamrobert content builder | FIXES
+	  -----------------------------------------------------------------------
+    
+ *	=======================================================================
+ */
+
+/* + RULES
+	======================================================================*/
+
+/* + SET MAIN HEIGHT
+	======================================================================*/	
+#contentarea {
+  	margin-top: 90px;
+}
+
+/* + TURN OFF ANIMATIONS
+	======================================================================*/	
+
+div#contentarea .row .columns *, div#contentarea .cell * {
+  /*CSS transitions*/
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  /*CSS transforms*/
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  /*CSS animations*/
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+/* + TOOLBAR FONT SIZES
+	======================================================================*/	
+.rte-paragraph-options {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5, h6 {
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+
+//    'h1': ('font-size': 40, 'mt': 26, 'lh': 1.255, 'mb': 27),
+//    'h2': ('font-size': 30, 'mt': 31, 'lh': 1.255, 'mb': 9),
+//    'h3': ('font-size': 24, 'mt': 26, 'lh': 1.355, 'mb': 17),
+//    'h4': ('font-size': 20, 'mt': 26, 'lh': 1.45, 'mb': 17),
+//    'h5': ('font-size': 17, 'mt': 26, 'lh': 1.5, 'mb': 1),
+//    'h6': ('font-size': 17, 'mt': 26, 'lh': 1.5, 'mb': 1),

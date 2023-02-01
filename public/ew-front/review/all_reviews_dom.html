@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+
+    <title> All Reviews </title>
+
+
+    <!--  -->
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style/ew-grid-bootstrap.min.css?v=0.02">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style/base.css?v=0.04">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style/layout.css?v=0.02">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style/module.css?v=0.21">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style/state.css?v=0.02">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style/theme.css?v=0.04">
+
+
+    <!--
+        <link rel="stylesheet" href="res/style/base.css">
+        <link rel="stylesheet" href="res/style/layout.css">
+        <link rel="stylesheet" href="res/style/module.css">
+        <link rel="stylesheet" href="res/style/state.css">
+        <link rel="stylesheet" href="res/style/theme.css">
+
+    -->
+
+</head>
+
+<body>
+
+<div class="container">
+    <!-- All Reviews Preview -->
+    <div class="all-reviews">
+
+        <div class="review-header d-flex justify-content-end hidden"> <!-- Review Header -->
+
+            <div class="review-header--filters">
+
+                <select class="review-header--filters_select" id="review-header--filters_select" value="0">
+                    <option value="0">All</option>
+                    <option value="5">5 Star</option>
+                    <option value="4">4 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="1">1 Star</option>
+                </select>
+            </div>
+
+            <!-- New Comment -->
+
+        </div> <!-- .review-header -->
+
+
+        <template id="customer-review-template">
+            <div class="customer-review">
+                <div class="customer-review--customer-picture--placeholder">
+                    <template class="customer-review--customer-picture--template">
+                        <img class="customer-review--customer-picture" width="100%" height="300px"
+                             alt="Customer's picture with the product">
+                    </template>
+                </div>
+
+                <div class="customer-review--details"> <!-- Just a block -->
+                    <div class="customer-review--customer-info l-flex l-flex-row l-center-vr">
+                        <h3 class="customer-review--customer-name Heading">
+                            <!-- Name will be here -->
+                        </h3>
+                        <div class="customer-review--customer-verification">
+                            <template id="verified">
+                                <div class="customer-review--customer-verified l-flex l-center-hr l-center-vr">✓</div>
+                                <!-- Verified Badge --->
+                            </template>
+
+                            <template id="unverified">
+                                <div class="customer-review--customer-verified l-flex l-center-hr l-center-vr"> ✕</div>
+                                <!-- Verified Badge --->
+                            </template>
+                        </div>
+
+                    </div> <!-- "customer-review--details  -->
+
+
+                    <time class="customer-review--review-date" datetime="2020-10-22"> 22/10/2020</time>
+
+                    <div class="customer-review--stars l-flex l-flex-row">
+                        <template id="star-on-template">
+                            <div class="star star-on"> ★</div>
+                        </template>
+                        <template id="star-off-template">
+                            <div class="star star-off"> ☆</div>
+                        </template>
+                    </div> <!-- Rated Stars--->
+
+
+                    <h6 class="customer-review--title">
+
+                    </h6> <!-- .customer-review--comment -->
+                    <p class="customer-review--comment">
+                        This one has been a bit of a white whale since I started my
+                        collection but I’m so happy I get to flash these flowers!
+                    </p> <!-- .customer-review--comment -->
+
+
+<!--                    <div class="customer-review&#45;&#45;item-type">-->
+<!--                        <p class="customer-review&#45;&#45;item-type-label l-inline "> Item Type </p>-->
+<!--                        <p class=" l-inline"><strong class="customer-review&#45;&#45;item-type-value"> XL </strong></p>-->
+<!--                    </div> &lt;!&ndash; .customer-review&#45;&#45;item-type &ndash;&gt;-->
+
+                </div>
+
+
+            </div> <!-- .customer-review --->
+        </template>
+
+        <div class="customers-review-list">
+        </div>
+        <div class="review-header d-flex justify-content-center">
+            <div class="review-bottom-action d-flex justify-content-center">
+                <div class="review-header--actions">
+                    <button class="write-review-button averageReviewWrapper_new__write_area-button Button"> Write A Review
+                    </button>
+                    <button id="load-more-review-button" class="customers-review-nav--load-more review-load-more_btn hidden Button"> More
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="customers-review--noreview l-flex l-flex-column l-center-hc hidden">
+
+            <h3 class="customers-review--noreview-title"> Be the first to write a review </h3>
+            <button class="write-review-button ew-btn text-no-wrap Button"> Write A Review</button>
+
+
+        </div>
+
+
+    </div> <!-- .customers-review -->
+
+
+    <!-- Quickview  -->
+    <div class="em-overlay quickview-overlay hidden">
+        <template id="quickview-template">
+            <div id="quickview" class="l-flex l-center-hr ">
+                <div class="quikview-picture">
+
+                    <div class="quikview--customer-pictures l-flex l-center-vr l-center-hr">
+                        <template class="quikview--customer-picture--template">
+                            <img class="quikview-picture-background">
+                            <img class="quikview-picture-img">
+                            <div class="fadingOverlayAnimationPlaceholder hidden"></div>
+                        </template>
+                    </div>
+
+                    <template id="quikview-picture-nav-template">
+                        <div class="quikview-picture-nav l-flex">
+                            <div class="quikview-picture-nav-btn  left-button l-flex l-center-hr l-center-vr">
+                                <p class="temp1"> < </p>
+                            </div>
+                            <div class="quikview-picture-nav-btn right-button l-flex l-center-hr l-center-vr">
+                                <p class="temp1"> > </p>
+                            </div>
+                        </div>
+                    </template>
+
+
+                </div> <!-- Quick View Pictures --->
+
+                <div class="quikview-review customer-review">
+                    <div class="customer-review--details"> <!-- Just a block -->
+
+                        <div class="l-flex l-flex-space-btwn">
+
+                            <div class="customer-review--customer-info l-flex l-flex-column ">
+                                <p class="customer-review--customer-name"><strong>Josh D</strong></p>
+
+
+                                <div class="customer-review--customer-verification">
+                                    <template id="verified">
+
+                                        <div class="l-flex l-center-vr text-smaller"> Verified Purchaser
+                                            <span class="customer-review--customer-verified l-flex l-center-hr l-center-vr">✓</span>
+                                        </div> <!-- Verified Badge --->
+
+                                    </template>
+
+                                    <template id="unverified">
+                                        <div class="customer-review--customer-verified l-flex l-center-hr l-center-vr">
+                                            ✕
+                                        </div> <!-- Verified Badge --->
+                                    </template>
+
+                                </div>
+
+
+                            </div> <!-- "customer-review--details  -->
+
+                            <!--
+
+                            <div class="socials l-half l-flex l-center-vr l-flex-space-evenly">
+                                <a class="socials-link" href="#"> <img class="socials-img"  src="res/image/socials/twitter.svg" alt="twitter icon"> </a>
+                                <a class="socials-link" href="#"> <img class="socials-img"  src="res/image/socials/twitter.svg" alt="twitter icon"> </a>
+                                <a class="socials-link" href="#"> <img class="socials-img"  src="res/image/socials/twitter.svg" alt="twitter icon"> </a>
+                                <a class="socials-link" href="#"> <img class="socials-img"  src="res/image/socials/twitter.svg" alt="twitter icon"> </a>
+                            </div>
+
+                             -->
+                            <div class="socials l-half l-flex l-center-vr l-flex-space-evenly">
+                                <a class="socials-link" href="#"> <img class="socials-img"
+                                                                       src="https://builder.emailwish.com/ew-front/review/res/image/socials/twitter.svg"
+                                                                       alt="twitter icon"> </a>
+                                <a class="socials-link" href="#"> <img class="socials-img"
+                                                                       src="https://builder.emailwish.com/ew-front/review/res/image/socials/twitter.svg"
+                                                                       alt="twitter icon"> </a>
+                                <a class="socials-link" href="#"> <img class="socials-img"
+                                                                       src="https://builder.emailwish.com/ew-front/review/res/image/socials/twitter.svg"
+                                                                       alt="twitter icon"> </a>
+                                <a class="socials-link" href="#"> <img class="socials-img"
+                                                                       src="https://builder.emailwish.com/ew-front/review/res/image/socials/twitter.svg"
+                                                                       alt="twitter icon"> </a>
+                            </div>
+
+                        </div>
+
+                        <p class="customer-review--review-date ">
+                            <time datetime="2020-10-22"> 22/10/2020</time>
+                        </p>
+
+                        <div class="customer-review--stars l-flex l-flex-row">
+                            <template id="star-on-template">
+                                <div class="star star-on"> ★</div>
+                            </template>
+                            <template id="star-off-template">
+                                <div class="star star-off"> ☆</div>
+                            </template>
+                        </div> <!-- Rated Stars--->
+
+
+                        <p class="customer-review--comment">
+                            This one has been a bit of a white whale since I started my
+                            collection but I’m so happy I get to flash these flowers!
+                        </p> <!-- .customer-review--comment -->
+
+
+                        <div class="customer-review--item-type">
+                            <p class="customer-review--item-type-label l-inline "> Item Type </p>
+                            <p class="customer-review--item-type-value l-inline"><strong> XL </strong></p>
+                        </div> <!-- .customer-review--item-type -->
+
+                    </div>
+                </div> <!-- .customer-review --->
+
+                <button class="quikview-review--close Button"> ✕</button>
+
+            </div>
+        </template>
+
+        <div class="customer-review-placeholder">
+
+        </div>
+    </div>
+
+
+    <!-- Write a review -->
+    <div class="em-overlay  ew-review-wizard-overlay l-flex l-center-vr l-center-hr hidden">
+
+        <div class="review-wizard l-flex l-flex-column l-flex-space-btwn hidden">
+
+            <div class="slides">
+
+                <form id="rating-form" class="slide slide1 l-flex l-flex-column hidden" data-slide-num="1"
+                      data-slide-form="true" data-slide_show_skip="false">
+                    <h3 class="slide-title l-center"> HOW WOULD YOU RATE THIS ITEM? </h3>
+                    <div class="slide-options l-flex l-flex-column l-center-hc">
+
+                        <button type="submit" class="slide-button slide-button-active Button" data-rating_value="5">
+                                <span class="slide-button-stars">
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+
+                                </span>
+                            <span class="slide-button-title"> Excellent </span>
+                        </button>
+
+                        <button type="submit" class="slide-button slide-button-active Button" data-rating_value="4">
+                                <span class="slide-button-stars">
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                </span>
+                            <span class="slide-button-title"> Just Wow </span>
+                        </button>
+
+                        <button type="submit" class="slide-button slide-button-active Button" data-rating_value="3">
+                                <span class="slide-button-stars">
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                </span>
+                            <span class="slide-button-title"> I like it </span>
+                        </button>
+
+                        <button type="submit" class="slide-button slide-button-active Button" data-rating_value="2">
+                                <span class="slide-button-stars">
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                </span>
+                            <span class="slide-button-title"> I dont like it </span>
+                        </button>
+
+                        <button type="submit" class="slide-button slide-button-active Button" data-rating_value="1">
+                                <span class="slide-button-stars">
+                                    <div class="star large-star star-on">  ★ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                    <div class="star large-star star-off"> ☆ </div>
+                                </span>
+                            <span class="slide-button-title"> I hate it </span>
+                        </button>
+
+
+                    </div>
+                </form>
+
+                <form id="pictures-form" class="slide slide1 l-flex l-flex-column hidden" data-slide-num="2"
+                      data-slide-form="true" data-slide_show_skip="true">
+                    <h3 class="slide-title l-center"> SHOW IT OFF </h3>
+                    <h4 class="slide-subtitle l-center"> WE'D LOVE TO SEE IT IN ACTION! </h4>
+
+                    <div class="slide-options l-flex l-flex-column l-center-hc">
+                        <!-- Aske user to upload their picture -->
+                        <div class="slide-options-image-chooser-askuser ">
+
+                            <button type="button" id="choose-picture-button"
+                                    class="slide-button slide-button-active l-flex l-flex-column l-center-vc l-center-hc Button">
+                                <span> Choose photo </span>
+                                <span> Get 20% off </span>
+                            </button>
+
+                        </div>
+
+                        <div class="slide-options-image-chooser hidden">
+                            <!-- List of user selected images -->
+                            <div class="slide-options-image-list l-flex l-center-hr l-center-vr l-flex-wrap ">
+
+                                <template id="slide-options-image-template">
+                                    <div class="slide-options-image">
+                                        <button type="button"
+                                                class="slide-options-image-remove l-flex l-flex-row l-center-hr l-center-vr curs Button">
+                                            x
+                                        </button>
+                                        <img class="slide-options-image-img" src="res/image/customer-pic.jpg">
+                                    </div>
+                                </template>
+
+
+                                <!-- Add Image button -->
+                                <input type="file" id="pictureInput" multiple hidden>
+                                <button type="button" id="append-picture-button"
+                                        class="slide-options-image-add l-flex l-flex-row l-center-vr l-center-hr Button"> +
+                                </button>
+
+                            </div>
+                            <button type="submit"
+                                    class="slide-button slide-button-active l-flex l-center-hr l-center-vr l-center Button">
+                                Next
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+
+                <form id="message-form" class="slide slide1 l-flex l-flex-column hidden" data-slide-num="3"
+                      data-slide-form="true" data-slide_show_skip="false">
+                    <h3 class="slide-title l-center"> TELL US MORE! </h3>
+                    <div class="slide-options l-flex l-flex-column ">
+
+                        <label class="slide-input-label"> TITLE </label>
+                        <input class="slide-input-text slide-input-title" name="title" type="text"
+                               placeholder="your message title goes here">
+
+                        <label class="slide-input-label"> MESSAGE </label>
+                        <textarea class="slide-input-text slide-input-message" name="message" type="email"
+                                  placeholder="your message goes here"></textarea>
+
+                        <button type="submit"
+                                class="slide-button slide-button-active l-flex l-center-hr l-center-vr l-center Button"> Next
+                        </button>
+
+                    </div>
+                </form>
+
+                <form id="about-reviewer-form" class="slide slide1 l-flex l-flex-column hidden" data-slide-num="4"
+                      data-slide-form="true" data-slide_show_skip="false">
+                    <h3 class="slide-title l-center"> About You </h3>
+                    <div class="slide-options l-flex l-flex-column ">
+                        <div class="review-submit">
+                            <div class="l-flex l-flex-row l-flex-space-btwn">
+                                <input class="slide-input-text review-submit-fname" type="text" name="fname"
+                                       placeholder="F. Name">
+                                <input class="slide-input-text review-submit-lname" type="text" name="lname"
+                                       placeholder="L. Name">
+                            </div>
+                            <input class="slide-input-text review-submit-email" type="email" name="email"
+                                   placeholder="Your email">
+                            <p class="review-submit-privacy l-center">By submitting, I acknowledge the <span> <a
+                                    href="#"> Privacy Policy  </a> </a> </span> and that my review will be publicly
+                                posted and shared online</p>
+                        </div>
+                        <button class="slide-button slide-button-active l-flex l-center-hr l-center-vr l-center Button"> Done
+                        </button>
+                    </div>
+                </form>
+
+
+                <div id="submitting-animation" class="slide l-flex l-flex-column l-center-vr l-center-hr hidden"
+                     data-slide-num="5">
+
+                    <div id="submitting-animation-uploading"
+                         class="submitting-animation-uploading l-flex l-flex-column l-center-hc">
+                        <h3 class=" slide-title no-margin l-center"> SUBMITTING </h3>
+                        <div class="submitting-progress">
+                            <div class="submitting-progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div id="submitting-animation-error" class="l-flex l-flex-column l-center-hc hidden">
+                        <h3 class="slide-title no-margin l-center"> REVIEW SUBMIT ERROR </h3>
+                        <P class="submitting-error-message"> <!-- WIll be set dynamically --> </P>
+
+                        <button id="submit-animation-retry-btn"
+                                class="slide-button slide-button-active l-flex l-center-hr l-center-vr l-center Button"> Retry
+                        </button>
+                    </div>
+                </div>
+
+
+                <form id="thank-you-form" class="slide slide1  l-flex l-flex-column hidden" data-slide-num="6"
+                      data-slide-form="false" data-slide_show_skip="false">
+                    <h3 class="slide-title l-center"> Thank You </h3>
+                    <div class="slide-options l-flex l-flex-column ">
+                        <p class="review-submit-privacy l-center">By submitting, I acknowledge the <span> <a href="#"> Privacy Policy  </a> </a> </span>
+                            and that my review will be publicly posted and shared online</p>
+                        <button class="slide-button slide-button-active l-flex l-center-hr l-center-vr l-center Button">
+                            Close
+                        </button>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+            <!-- Slide Navigation  -->
+            <div class="slide-nav-options l-flex l-flex-row l-flex-space-btwn">
+                <div class="slide-nav-left">
+                    <button class="slide-nav-back Button"> Back</button>
+                </div>
+
+                <!--
+            <div  class="slide-nav-center" >
+                <div class="review-progress">
+                    <div class="review-progress-filled"></div>
+                </div>
+            </div>
+                -->
+
+                <div class="slide-nav-right">
+                    <button class="slide-nav-skip Button"> Skip</button>
+                </div>
+
+            </div>
+
+            <!-- Wizard Close Button -->
+            <button class="review-wizard-close-btn l-flex l-center-vr l-center-hr Button"> ✕</button>
+
+            <div class="wizard-alert-list">
+                <!-- Error Alert -->
+                <template class="wizard-alert-template">
+                    <div class="wizard-alert l-flex l-center-vr">
+                        <div class="wizard-alert-icon"></div>
+                        <p class="wizard-alert-message"> <!-- Error Message Will Be here -->  </p>
+                        <button class="wizard-alert-close l-flex l-center-vr Button"> ✕</button>
+                    </div>
+                </template>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

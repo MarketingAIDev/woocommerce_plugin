@@ -1,0 +1,4 @@
+.container {margin:0 auto;width:650px;max-width:650px; padding:35px;box-sizing:border-box;background:#fff}
+#btnGetHtml, .white-cap-btn{text-transform:uppercase;background:white;border:0;cursor:pointer;}
+#btnClose{display:none}
+.column.half{width: 50%;}

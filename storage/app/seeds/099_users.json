@@ -1,0 +1,7 @@
+{
+"table_name":"users",
+"data":
+[
+{"id":"1","uid":"5e6f619ac5df6","api_token":"KDb81NA6crXrQizv0xu7KkMFeugQrMb4hoG1EazNAVgdXqq2Qt7T7SZdUqVz","creator_id":null,"email":"admin@emailwish.com","password":"$2y$10$H4HWzUEHNiWv3AizwKAlk.aVSIfEwVcBPLqm9NNnLRXMM2dc5fL4O","remember_token":"NcbTmmnHtegPEwurQo64yZzC3pbogt6nfBPDWnCMIBaqvsri1sWR0ehMhymU","status":"active","created_at":"2017-01-01 00:00:00","updated_at":"2020-08-18 10:29:14","quota":null,"activated":"1","first_name":"","last_name":"","timezone":""}
+]
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chat Control</title>
+    <style>
+
+
+        :root {
+            --chat-primay-bgcolor: #151515;
+            --chat-primay-color: #ffffff;
+
+        }
+
+        /*Base*/
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: max-content;
+            width: max-content;
+        }
+
+
+        /*Utility*/
+
+        .btn {
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-circle {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+        }
+
+        .primary-color {
+            background-color: var(--chat-primay-bgcolor);
+            color: var(--chat-primay-color);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /*Layouts*/
+
+
+        .l-flex {
+            display: flex;
+        }
+
+        .l-center-hr {
+            justify-content: center;
+        }
+
+        .l-center-vr {
+            align-items: center;
+        }
+
+
+        /* Modules */
+
+        #chat-control {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+        }
+
+        .chat-control-btn {
+
+            height: 4rem;
+            width: 4rem;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1.4rem;
+
+        }
+
+        .chat-control-btn.chat-hidden {
+
+            background-image: url("/ew-front/chat/res/image/chat.png?v=0.2");
+            fill: var(--chat-primay-color);
+        }
+
+        .chat-control-btn.chat-unhidden {
+            background-image: url("/ew-front/chat/res/image/down_arrow.png?v=0.5");
+            fill: var(--chat-primay-color);
+        }
+
+
+        .chat-control--unread-msgs {
+
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+        }
+
+        /*Themes*/
+
+        .chat-control--unread-msgs {
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            background-color: #dc1313;
+
+        }
+
+    </style>
+
+    <script>
+
+        // References to page elements
+        let chatControllButton;
+        let chatUnreadMessages;
+
+        let isChatHidden = true;
+
+
+        // get reference for page elements
+        window.addEventListener("load", event => {
+
+            chatControllButton = document.querySelector(".chat-control-btn");
+            chatUnreadMessages = document.querySelector(".chat-control--unread-msgs");
+        })
+
+        // Register Event Listers for elements
+        window.addEventListener("load", event => {
+
+
+            chatControllButton.addEventListener("click", event => {
+
+                let messageData;
+                if (isChatHidden) {
+                    messageData = {action: "unhide_chat"};
+                } else {
+                    messageData = {action: "hide_chat"};
+                }
+
+                window.parent.postMessage(messageData, '*');
+
+            });
+
+
+            // Register to recived message Events
+            window.addEventListener("message", message => {
+                let messageData = message.data;
+                let messageAction = messageData.action;
+
+                switch (messageAction) {
+                    case "new_unread_message" : {
+
+                        // update the number of unread messages
+                        chatUnreadMessages.innerText = messageData.count;
+
+                        // unhide the unread messges counter
+                        chatUnreadMessages.classList.remove("hidden");
+
+
+                    }
+
+                    case "chat_hidden" : {
+
+                        chatControllButton.classList.remove("chat-unhidden");
+                        chatControllButton.classList.add("chat-hidden");
+
+                        isChatHidden = true;
+                        break;
+                    }
+
+                    case "chat_unhidden" : {
+
+                        chatControllButton.classList.add("chat-unhidden");
+                        chatControllButton.classList.remove("chat-hidden");
+
+                        // Hide the unread messges counter
+                        chatUnreadMessages.classList.add("hidden");
+
+                        isChatHidden = false;
+                        break;
+                    }
+
+                    case "chat_theme" : {
+                        applyTheme(messageData.theme);
+                        break;
+                    }
+
+                    default : {
+                        console.log(`${messageAction} is not implemented yet`);
+                    }
+                }
+
+            });
+
+        });
+
+
+        /* Updates the local theme  */
+        let applyTheme = theme => {
+
+            document.documentElement.style.setProperty("--chat-primay-bgcolor", theme.primary_bgcolor);
+            document.documentElement.style.setProperty("--chat-primay-color", theme.primary_textcolor);
+
+            document.documentElement.style.setProperty("--chat-secondary-bgcolor", theme.secondary_bgcolor);
+            document.documentElement.style.setProperty("--chat-secondary-color", theme.secondary_textcolor);
+        }
+
+
+    </script>
+
+</head>
+<body>
+<div id="chat-control">
+    <div class="chat-control-btn btn btn-circle primary-color chat-hidden">
+        <div class="chat-control--unread-msgs l-flex l-center-hr l-center-vr hidden "> 3</div>
+    </div>
+</div>
+</body>
+</html>  

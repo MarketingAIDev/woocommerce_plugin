@@ -1,0 +1,13 @@
+{
+"table_name":"payment_methods",
+"data":
+[
+{"id":"1","uid":"5e6f6198288aa","admin_id":null,"name":"Pay by Card (Paddle)","type":"paddle_card","options":null,"status":"inactive","custom_order":"5","created_at":"2017-08-14 05:30:00","updated_at":"2017-08-14 05:30:00"},
+{"id":"2","uid":"5e6f619832486","admin_id":null,"name":"PayU Money","type":"payumoney","options":null,"status":"inactive","custom_order":"6","created_at":"2017-10-02 05:30:00","updated_at":"2017-10-02 05:30:00"},
+{"id":"3","uid":"58bf6e250782f","admin_id":null,"name":"Pay in Cash","type":"cash","options":"null","status":"active","custom_order":"0","created_at":"2017-03-08 02:36:21","updated_at":"2017-03-08 02:56:29"},
+{"id":"4","uid":"58bf724e9789b","admin_id":null,"name":"Pay with PayPal","type":"braintree_paypal","options":"{\"environment\":\"production\",\"merchantId\":\"\",\"publicKey\":\"\",\"privateKey\":\"\"}","status":"inactive","custom_order":"2","created_at":"2017-03-08 02:54:06","updated_at":"2017-03-08 02:55:20"},
+{"id":"5","uid":"58bf7298565d0","admin_id":null,"name":"Pay by Credit Card","type":"braintree_credit_card","options":"{\"environment\":\"production\",\"merchantId\":\"\",\"publicKey\":\"\",\"privateKey\":\"\"}","status":"inactive","custom_order":"3","created_at":"2017-03-08 02:55:20","updated_at":"2017-03-08 02:56:37"},
+{"id":"6","uid":"58f0a900c19d3","admin_id":null,"name":"Pay by Credit Card","type":"stripe_credit_card","options":"{\"api_key\":\"pk_test_6pRNASCoBOKtIshFeQd4XMUh\"}","status":"inactive","custom_order":"4","created_at":"2017-04-14 10:48:32","updated_at":"2017-04-14 12:17:00"},
+{"id":"7","uid":"581b52d8acdca","admin_id":null,"name":"Pay with PayPal","type":"paypal","options":null,"status":"inactive","custom_order":"1","created_at":"2017-04-14 10:48:32","updated_at":"2017-04-14 12:17:00"}
+]
+}

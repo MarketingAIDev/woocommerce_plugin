@@ -1,0 +1,6 @@
+{
+"table_name": "shopify_shops",
+"data": [
+{"id":"1","uid":"607a977dc56fc","user_id":"1","customer_id":"1","name":"emailwish-demo","myshopify_domain":"emailwish-demo.myshopify.com","primary_domain":"emailwish-demo.myshopify.com","primary_currency":"USD","access_token":"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","scope":"read_all_orders,read_orders,read_customers,read_products,read_checkouts,read_themes,write_themes,read_script_tags,write_script_tags","nonce":"","theme":"{\"font_family\":\"Open Sans\",\"buy_now_btn_color\":\"#1b1a17ff\",\"buy_now_btn_text_color\":\"#a35709ff\",\"add_to_cart_btn_color\":\"#ff8303ff\",\"add_to_cart_btn_text_color\":\"#f0e3caff\"}","active":"1","initializing":"1","initialized":"1","created_at":"2021-04-17 13:38:29","updated_at":"2021-04-17 13:53:22","new":"1","onboarding_complete":"1","enable_chat_script":"0","enable_popup_script":"0","enable_review_script":"0","widget_script_tag_id":null}
+]
+}

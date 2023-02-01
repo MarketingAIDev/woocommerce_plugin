@@ -1,0 +1,6 @@
+{
+"table_name":"sending_servers",
+"data":[
+{"id":"1","uid":"5e6f61d81df3c","admin_id":"1","customer_id":null,"bounce_handler_id":null,"feedback_loop_handler_id":null,"name":"Fake SMTP","type":"smtp","host":"localhost","aws_access_key_id":null,"aws_secret_access_key":null,"aws_region":null,"domain":null,"api_key":null,"smtp_username":"","smtp_password":"","smtp_port":"25","smtp_protocol":"","sendmail_path":null,"quota_value":"1000","quota_base":"1","quota_unit":"hour","status":"active","custom_order":"1","created_at":"2020-03-16 16:54:08","updated_at":"2020-04-19 20:59:21","api_secret_key":null,"quota":null,"default_from_email":"","options":"{\"domains\":[],\"emails\":[],\"allow_unverified_from_email\":\"no\",\"allow_verify_domain_remotely\":\"no\",\"allow_verify_email_remotely\":\"no\",\"sending_limit\":\"1000_per_hour\",\"allow_verify_domain_against_acelle\":\"yes\",\"allow_verify_email_against_acelle\":\"yes\"}"}
+]
+}

@@ -1,0 +1,6 @@
+{
+"table_name": "templates",
+"data": [
+{"id": "8","uid": "5f52056854cf7","customer_id": "1","admin_id": null,"name": "Sample template","content": "","image": null,"custom_order": "0","shared": true,"created_at": "2020-09-04 14:44:16","updated_at": "2020-09-04 14:44:16","source": null}
+]
+}

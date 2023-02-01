@@ -1,0 +1,204 @@
+:root {
+
+    --chat-primay-bgcolor: #151515;
+    --chat-primay-color: #ffffff;
+
+    --chat-secondary-bgcolor: #3a84ac;
+    --chat-secondary-color: #3a84ac;
+
+
+    --chat-message-info-color: #746f6f;
+}
+
+#chat-section {
+    background-color: #ffffff;
+}
+
+#chat-header {
+    background-color: var(--chat-primay-bgcolor);
+    color: var(--chat-primay-color);
+}
+
+#chat-status--indicator {
+    background-color: lawngreen;
+}
+
+
+#chat-body {
+    background-color: #ffffff;
+}
+
+/*
+Scrollbar customization for chat body
+*/
+
+
+/*
+    Scroll bar customizations on  FF
+*/
+
+#chat-body {
+    scrollbar-color: transparent transparent;
+}
+
+#chat-body:hover {
+    scrollbar-color: var(--chat-primay-bgcolor) var(--chat-secondary-color);
+}
+
+/*
+    Scrollbar customization on  webkit
+*/
+
+#chat-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+#chat-body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#chat-body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+#chat-body:hover::-webkit-scrollbar-track {
+    background-color: var(--chat-secondary-color)
+
+}
+
+#chat-body:hover::-webkit-scrollbar-thumb {
+    background-color: var(--chat-primay-bgcolor)
+
+}
+
+/* 
+ FInished Scrollbar customizations
+*/
+
+
+.message .text {
+    font-size: 0.85rem;
+}
+
+.message.sent .message-wrapper {
+    background-color: var(--chat-primay-bgcolor);
+    color: var(--chat-primay-color);
+}
+
+.message.sent .text {
+    color: var(--chat-primay-color);
+}
+
+.message.recieved .message-wrapper {
+    background-color: var(--chat-secondary-bgcolor);
+}
+
+.message.recieved .message-wrapper::after {
+    background-color: var(--chat-secondary-bgcolor);
+}
+
+.message.recieved .text {
+    color: var(--chat-secondary-color);
+}
+
+
+.message .message-info {
+    color: var(--chat-message-info-color);
+}
+
+
+#new-message-marker p {
+    background-color: white;
+    color: gray;
+}
+
+.sender-name {
+    font-size: 0.75rem;
+    color: #6a6a75;
+}
+
+
+/*Attachment Selector*/
+
+#action-attachment-output-cancel {
+
+    color: #8a1d1d;
+    background-color: #e3e1e1
+}
+
+#action-attachment-output-cancel:hover {
+    background-color: #bfbdbd;
+}
+
+#action-attachment-output-filesize {
+    color: grey;
+}
+
+
+/* Attachement Message */
+.message.sent .attachment-file-link {
+    color: var(--chat-primay-color);
+}
+
+.message.sent .attachment-file-filesize {
+    color: var(--chat-primay-color);
+    opacity: 0.5;
+}
+
+.message.recieved .attachment-file-link {
+    color: var(--chat-secondary-color);
+}
+
+.message.recieved .attachment-file-filesize {
+    color: var(--chat-secondary-color);
+    opacity: 0.5;
+}
+
+
+/* Chat Actions */
+
+#chat-actions {
+    box-shadow: 0px 9px 25px 2px #e3e2e2;
+}
+
+#action-attachment-selector {
+    background: none;
+}
+
+.attachment-upload-progress-track {
+    background-color: gray;
+}
+
+.attachment-upload-progress-thumb {
+    background-color: greenyellow;
+}
+
+
+#action-input {
+
+
+}
+
+#action-send {
+
+    background-color: var(--chat-primay-bgcolor);
+    color: var(--chat-primay-color);
+
+}
+
+.initiate-chat--action-cancel {
+    background-color: var(--chat-secondary-bgcolor);
+    color: var(--chat-secondary-color);
+}
+
+.initiate-chat--action-start {
+    background-color: var(--chat-primay-bgcolor);
+    color: var(--chat-primay-color);
+}
+
+
+/* Em Platform  */
+
+.em-platform--banner {
+    color: #6b6b6b;
+}

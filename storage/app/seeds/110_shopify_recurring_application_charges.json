@@ -1,0 +1,6 @@
+{
+"table_name": "shopify_recurring_application_charges",
+"data": [
+{"customer_id":"1","id":"1","plan_id":"1","shop_id":"1","shopify_id":"14145111","uid":"60cd7be159509","data":"{}","status":"active","created_at":"2020-01-01 00:00:00","updated_at":"2020-07-22 23:54:36","trial_ends_at":"2020-07-22 23:54:36"}
+]
+}

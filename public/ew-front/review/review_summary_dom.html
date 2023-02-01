@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title> Average Review </title>
+
+    <!-- ---->
+    <link rel="stylesheet"  href="https://builder.emailwish.com/ew-front/review/res/style/ew-grid-bootstrap.min.css?v=0.03">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style-summary/theme.css?v=0.06">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style-summary/base.css?v=0.05">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style-summary/layout.css?v=0.05">
+    <link rel="stylesheet" href="https://builder.emailwish.com/ew-front/review/res/style-summary/module.css?v=0.18">
+
+
+    <!--
+
+
+    <link rel="stylesheet" href="res/style-summary/base.css">
+    <link rel="stylesheet" href="res/style-summary/layout.css">
+    <link rel="stylesheet" href="res/style-summary/module.css">
+    <link rel="stylesheet" href="res/style-summary/theme.css">
+
+    -->
+
+</head>
+<body>
+<div class="averageReviewWrapper_new" id="avarageReviewWrapper">
+    <div class="container" style="border-bottom: 1px solid #dadada">
+        <div class="row">
+            <div class="col-12">
+                <div class="averageReviewWrapper_new__heading" id="avarageReview">
+                    <h3 class="Heading u-h3">Customer Reviews</h3>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="row">
+                    <div class="averageReviewWrapper_new__summery col-md col-sm-12" >
+                        <div class="d-flex">
+                            <div style="margin-top: 10px">
+                                <span class="averageReviewWrapper_new__summery_rating_count" id="average-score-label">4.5</span>
+                            </div>
+                            <div class="d-flex flex-column"  style="padding-left: 4px; ">
+                                <div class="rating-star-wrapper">
+                                    <template class="star-on-template">
+                                        <div class="star large-star star-on">  ★ </div>
+                                    </template>
+
+                                    <template class="star-off-template">
+                                        <div class="star large-star star-off"> ☆ </div>
+                                    </template>
+                                </div>
+                                <span class="averageReviewWrapper_new__summery_total_review">
+                        Based on <span id="review-count-label">50</span> reviews
+			</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="averageReviewWrapper_new__rating col-md col-sm-12">
+                        <div class="averageReviewWrapper_new__rating_item_wrapper ew-summery-rate-bar-5"
+                             data-message="5">
+				<span class="averageReviewWrapper_new__rating_item_wrapper-rating">
+					<span class="averageReviewWrapper_new__rating_item_wrapper-rating_count">5</span>
+					<div class="star star-on">★</div>
+				</span>
+                            <div class="averageReviewWrapper_new__summery_total_review-detail-range">
+                                <div id="bar5" class="averageReviewWrapper_new-detail-range-value"></div>
+                            </div>
+                            <span id="bar-label5" class="averageReviewWrapper_new__summery_total_review-detail-number"> 34</span>
+                        </div>
+                        <div class="averageReviewWrapper_new__rating_item_wrapper ew-summery-rate-bar-4"
+                             data-message="4">
+				<span class="averageReviewWrapper_new__rating_item_wrapper-rating">
+					<span class="averageReviewWrapper_new__rating_item_wrapper-rating_count">4</span>
+					<div class="star star-on">★</div>
+				</span>
+                            <div class="averageReviewWrapper_new__summery_total_review-detail-range">
+                                <div id="bar4" class="averageReviewWrapper_new-detail-range-value"></div>
+                            </div>
+                            <span id="bar-label4" class="averageReviewWrapper_new__summery_total_review-detail-number"> 34</span>
+                        </div>
+                        <div class="averageReviewWrapper_new__rating_item_wrapper ew-summery-rate-bar-3"
+                             data-message="3">
+				<span class="averageReviewWrapper_new__rating_item_wrapper-rating">
+					<span class="averageReviewWrapper_new__rating_item_wrapper-rating_count">3</span>
+					<div class="star star-on">★</div>
+				</span>
+                            <div class="averageReviewWrapper_new__summery_total_review-detail-range">
+                                <div id="bar3" class="averageReviewWrapper_new-detail-range-value"></div>
+                            </div>
+                            <span id="bar-label3" class="averageReviewWrapper_new__summery_total_review-detail-number"> 34</span>
+                        </div>
+                        <div class="averageReviewWrapper_new__rating_item_wrapper ew-summery-rate-bar-2"
+                             data-message="2">
+				<span class="averageReviewWrapper_new__rating_item_wrapper-rating">
+					<span class="averageReviewWrapper_new__rating_item_wrapper-rating_count">2</span>
+					<div class="star star-on">★</div>
+				</span>
+                            <div class="averageReviewWrapper_new__summery_total_review-detail-range">
+                                <div id="bar2" class="averageReviewWrapper_new-detail-range-value"></div>
+                            </div>
+                            <span id="bar-label2" class="averageReviewWrapper_new__summery_total_review-detail-number"> 34</span>
+                        </div>
+                        <div class="averageReviewWrapper_new__rating_item_wrapper ew-summery-rate-bar-1"
+                             data-message="1">
+				<span class="averageReviewWrapper_new__rating_item_wrapper-rating">
+					<span class="averageReviewWrapper_new__rating_item_wrapper-rating_count">1</span>
+					<div class="star star-on">★</div>
+				</span>
+                            <div class="averageReviewWrapper_new__summery_total_review-detail-range">
+                                <div id="bar1" class="averageReviewWrapper_new-detail-range-value"></div>
+                            </div>
+                            <span id="bar-label1" class="averageReviewWrapper_new__summery_total_review-detail-number"> 34</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="averageReviewWrapper_new__write_area col-lg-7 d-none d-lg-flex justify-content-end">
+                <div>
+                    <button class="write-review-button Button">
+                        Write a review
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

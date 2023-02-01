@@ -1,0 +1,148 @@
+.ew #avarageReview {
+    width: 100%;
+    font-size: 1rem;
+}
+.ew .averageReview-title {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+.ew .averageReview-brief {
+    margin-bottom: 1em;
+}
+.ew .averageReview-brief-star-number {
+    height: 4em;
+    padding: 0 1em;
+    border-radius: 4em;
+}
+.ew .averageReview-stars {
+    width: max-content;
+    margin-right: 1em;
+}
+.ew .star {
+    width: max-content;
+    height: max-content;
+    font-size: 1.5rem;;
+}
+.ew .averageReview-count-text {
+    margin: 0.5em auto;
+}
+.ew .averageReview-detail {
+    width: max-content;
+    margin-bottom: 1em;
+}
+.ew .averageReview-detail-row {
+    width: max-content;
+    margin-bottom: 1em;
+}
+.ew .averageReview-detail-rating {
+    font-size: 1.125rem;
+}
+.ew .averageReview-detail-range {
+    width: 12.5em;
+    height: 1.125em;
+    margin: 0 0.5em;
+    border-radius: 1.125em;
+}
+.ew .averageReview-detail-range > .averageReview-detail-range-value {
+    height: 100%;
+    width: 40%;
+    max-width: 100%;
+    border-radius: 1.125em;
+}
+.ew .averageReview-detail-number {
+    font-size: 1.125rem;
+}
+.ew .averageReviewWrapper_new {
+    margin-bottom: 10px;
+}
+.ew .averageReviewWrapper_new__heading {
+    margin-bottom: 10px;
+}
+.ew .averageReviewWrapper_new__heading h3 {
+    text-align: center;
+}
+.ew .averageReviewWrapper_new__summery {
+    display: flex;
+}
+.ew .averageReviewWrapper_new__rating {
+    padding: 0 3px 10px 19px;
+    border-left: 1px solid #dadada;
+    margin: 1px 10px 10px 10px;
+}
+.ew .averageReviewWrapper_new__summery_rating_count {
+    padding: 10px;
+    background: #000000;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 10px;
+}
+.ew .averageReviewWrapper_new__summery_total_review {
+    font-size: 0.8rem;
+    color: #cecece;
+}
+.ew .averageReviewWrapper_new__summery_total_review-detail-range {
+    width: 100%;
+    height: 0.22em;
+    margin: 0 0.5em;
+    border-radius: 1.125em;
+    background: #eeeeee;
+}
+.ew .averageReviewWrapper_new__summery_total_review-detail-range > .averageReviewWrapper_new-detail-range-value {
+    height: 100%;
+    width: 40%;
+    max-width: 100%;
+    border-radius: 1.125em;
+    background: #000000;
+}
+.ew .averageReviewWrapper_new__rating_item_wrapper {
+    display: flex;
+    align-items: center;
+    max-height: 28px;
+}
+.ew .averageReviewWrapper_new__rating_item_wrapper:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.ew .averageReviewWrapper_new__rating_item_wrapper-rating {
+    display: flex;
+    align-items: center;
+}
+.ew .rating-star-wrapper {
+    display: flex;
+}
+.ew .averageReviewWrapper_new__rating_item_wrapper-rating_count {
+    font-size: 0.7rem;
+    /* margin-top: 0.2em; */
+
+    line-height: 0.8;
+}
+.ew .averageReviewWrapper_new__rating_item_wrapper-rating .star {
+    font-size: 1rem;
+    color: #000000;
+    padding: 2px;
+    line-height: 1;
+}
+.ew .averageReviewWrapper_new__rating_item_wrapper-rating .star-on,
+.ew .rating-star-wrapper .star {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1;
+}
+.ew .averageReviewWrapper_new__summery_total_review-detail-number {
+    font-size: 1rem;
+    color: #d4d4d4;
+}
+.ew .averageReviewWrapper_new__write_area {
+    display: flex;
+}
+.ew .averageReviewWrapper_new__write_area button {
+    padding: 14px 28px;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+.ew .averageReviewWrapper_new__write_area button:focus {
+    outline: none;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .container {}
+
+        .container>div {
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0;
+            display: inline-block;
+            float: left;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            border: #eee 1px solid;
+            box-sizing: border-box;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .tab-content {
+            position: fixed;
+            width: 100%;
+            height: calc((100% - 84px));
+            top: 40px;
+            left: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            display: none;
+            flex-flow: wrap;
+            align-content: start;
+        }
+
+        .tab-content>div {
+            min-width: 65px
+        }
+
+        /* custom scroll bars */
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: 8px;
+            scrollbar-height: 8px;
+            scrollbar-color: rgb(162, 162, 162) #eee;
+            overflow-x: visible;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #eee;
+            /* border-radius: 20px; */
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: rgb(162, 162, 162);
+            /* border-radius: 20px; */
+            border: 3px solid #eee;
+        }
+
+        /* Auto Hide Scrollbar */
+        .myautohidescroll {
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+        }
+
+        .myautohidescroll:hover {
+            overflow-y: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position:absolute;display:none;">
+        <defs>
+            <symbol viewBox="0 0 512 512" id="ion-more">
+                <path
+                    d="M113.7 304C86.2 304 64 282.6 64 256c0-26.5 22.2-48 49.7-48 27.6 0 49.8 21.5 49.8 48 0 26.6-22.2 48-49.8 48zM256 304c-27.5 0-49.8-21.4-49.8-48 0-26.5 22.3-48 49.8-48 27.5 0 49.7 21.5 49.7 48 0 26.6-22.2 48-49.7 48zM398.2 304c-27.5 0-49.8-21.4-49.8-48 0-26.5 22.2-48 49.8-48 27.5 0 49.8 21.5 49.8 48 0 26.6-22.2 48-49.8 48z">
+                </path>
+            </symbol>
+        </defs>
+    </svg>
+
+    <div class="tab-content container clearfix myautohidescroll" style="display:flex">
+        <div title="{CAMPAIGN_NAME}">Campaign Name</div>
+        <div title="{CAMPAIGN_UID}">Campaign UID</div>
+        <div title="{CAMPAIGN_SUBJECT}">Campaign Subject</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+        <div title="{CAMPAIGN_FROM_EMAIL}">Campaign From Email</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('.container > div').click(function () {
+                const s = jQuery(this).attr('title');
+                parent._cb.pasteHtmlAtCaret(s, true);
+            });
+        });
+    </script>
+</body>
+
+</html>

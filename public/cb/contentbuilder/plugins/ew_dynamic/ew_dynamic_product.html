@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        @import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,600,800'); /* default font */
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: Open Sans, sans-serif
+        }
+
+        .container {
+        }
+
+        .container > div {
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 0;
+            display: inline-block;
+            float: left;
+            width: 25%;
+            height: 80px;
+            line-height: 80px;
+            border: #eee 1px solid;
+            box-sizing: border-box;
+        }
+
+        .clearfix:before, .clearfix:after {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        button {
+            width: 55px;
+            height: 50px;
+            line-height: 1;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            background-color: #fff;
+            color: #4a4a4a;
+            border: 1px solid transparent;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            border-radius: 0;
+            transition: all ease 0.3s
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button.classic-primary {
+            display: inline-block;
+            width: auto;
+            height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            min-width: 135px;
+            background: #f7f7f7;
+        }
+
+        button.classic-secondary {
+            display: inline-block;
+            width: auto;
+            height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background: transparent;
+        }
+
+        select {
+            font-size: 14px;
+            letter-spacing: 1px;
+            height: 50px;
+            line-height: 1.7;
+            color: #454545;
+            border-radius: 0;
+            border: none;
+            background-color: #eee;
+            width: auto;
+            display: inline-block;
+            background-image: none;
+            -webkit-appearance: menulist;
+            -moz-appearance: menulist;
+            appearance: menulist;
+            padding: 0 5px;
+        }
+
+        select:focus {
+            outline: none
+        }
+
+        /*
+            Tabs
+        */
+        .is-tabs.simple {
+            white-space: nowrap;
+            padding: 20px;
+            padding-bottom: 5px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #f9f9f9;
+        }
+
+        .is-tabs.simple a {
+            display: inline-block;
+            float: left;
+            padding: 3px 3px 0;
+            color: #4a4a4a;
+            border-bottom: transparent 1px solid;
+
+            margin: 0 16px 16px 0;
+            text-decoration: none;
+            transition: box-shadow ease 0.3s;
+        }
+
+        .is-tabs.simple a:hover {
+
+        }
+
+        .is-tabs.simple a.active {
+            background: transparent;
+            box-shadow: none;
+            cursor: default;
+            border-bottom: rgba(103, 103, 103, 0.72) 1px solid;
+        }
+
+        .is-tab-content.simple {
+            display: none;
+            padding: 20px;
+        }
+
+        /* Overide */
+        .is-tabs.simple {
+            border-bottom: #ececec 1px solid;
+            padding-bottom: 15px;
+        }
+
+        .is-tabs.simple a {
+            margin: 0 16px 0 0;
+            line-height: 1.8
+        }
+
+        .is-tab-content {
+            border: none;
+            padding: 20px;
+            box-sizing: border-box;
+            display: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            top: 0px;
+        }
+
+
+        .is-button-remove {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 20px;
+            height: 20px;
+            background: rgba(95, 94, 94, 0.26);
+            color: #fff;
+            line-height: 20px;
+            text-align: center;
+            font-size: 12px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #divMyButtonList {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            border-top: transparent 90px solid;
+            box-sizing: border-box;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        #divMyButtonList a {
+            position: relative
+        }
+
+        #divMyButtonList a.active .is-button-remove {
+            display: block;
+        }
+
+        #divButtonTemplates {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        /* Templates */
+        #divMyButtonList > a, #divButtonTemplates > a {
+            margin: 0px 13px 15px 0;
+            padding: 10px 50px;
+            font-size: 1rem;
+            line-height: 2rem;
+            border-radius: 0;
+            letter-spacing: 3px;
+            display: inline-block;
+            font-weight: normal;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            -webkit-transition: all 0.16s ease;
+            transition: all 0.16s ease;
+            text-decoration: none;
+            color: #000;
+        }
+
+        button.is-btn-color {
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            background: transparent;
+            border: rgba(0, 0, 0, 0.09) 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;display:none;">
+    <defs>
+        <symbol viewBox="0 0 512 512" id="ion-ios-close-empty">
+            <path d="M340.2 160l-84.4 84.3-84-83.9-11.8 11.8 84 83.8-84 83.9 11.8 11.7 84-83.8 84.4 84.2 11.8-11.7-84.4-84.3 84.4-84.2z"></path>
+        </symbol>
+        <symbol viewBox="0 0 512 512" id="ion-contrast">
+            <path d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224S379.7 32 256 32zm135.8 359.8C355.5 428 307 448 256 448V64c51 0 99.5 20 135.8 56.2C428 156.5 448 204.7 448 256c0 51.3-20 99.5-56.2 135.8z"></path>
+        </symbol>
+    </defs>
+</svg>
+
+<div id="dynamicProduct" class="is-tab-content" data-group="button" style="display:block">
+    <div style="width:100%;">
+        <div style="width:40%;display:inline-block;">
+            <span>Product Source:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <select style="margin-top:0" id="input_source"  value="automation" onchange="updateIframeUrl()">
+                <option value=""></option>
+                <option value="automation">From Automation Trigger</option>
+                <option value="product_id">From Product ID</option>
+            </select>
+        </div>
+    </div>
+    <div style="width:100%;display:none" id="product_id_container">
+        <div style="width:40%;display:inline-block;position: relative;top: -15px;">
+            <span>Select Product:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <select style="margin-top:0" id="input_product_id"  value="automation" onchange="updateIframeUrl()">
+                <option value=""></option>
+                <option value="automation">From Automation Trigger</option>
+                <option value="product_id">From Product ID</option>
+            </select>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <div style="width:40%;display:inline-block;">
+            <span>Description:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <input style="margin:5px 0" id="input_description" type="checkbox" onchange="updateIframeUrl()"/>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <div style="width:40%;display:inline-block;">
+            <span>Button Text:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <input style="margin:5px 0" id="input_button_text" type="text" onchange="updateIframeUrl()"/>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <div style="width:40%;display:inline-block;">
+            <span>Button Color:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <input style="margin:5px 0" id="input_button_color" type="color" onchange="updateIframeUrl()"/>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <div style="width:40%;display:inline-block;">
+            <span>Button Border Color:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <input style="margin:5px 0" id="input_button_border_color" type="color" onchange="updateIframeUrl()"/>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <div style="width:40%;display:inline-block;">
+            <span>Button Text Color:</span>
+        </div>
+        <div style="width:40%;display:inline-block;">
+            <input style="margin:5px 0" id="input_button_text_color" type="color" onchange="updateIframeUrl()"/>
+        </div>
+    </div>
+</div>
+
+<script>
+    const activeIframe = parent._cb.activeElement.querySelector('iframe');
+
+    const product_id_container = document.getElementById("product_id_container")
+    const input_source = document.getElementById("input_source")
+    const input_product_id = document.getElementById("input_product_id")
+    const input_description = document.getElementById("input_description")
+    const input_button_text = document.getElementById("input_button_text")
+    const input_button_color = document.getElementById("input_button_color")
+    const input_button_border_color = document.getElementById("input_button_border_color")
+    const input_button_text_color = document.getElementById("input_button_text_color")
+
+    function updateIframeUrl() {
+        let activeIframeUrl = new URL(activeIframe.src);
+        activeIframeUrl.searchParams.set('source', input_source.value);
+        activeIframeUrl.searchParams.set('description', input_description.checked ? "Y" : "N");
+        activeIframeUrl.searchParams.set('button_text', input_button_text.value);
+        activeIframeUrl.searchParams.set('button_color', input_button_color.value);
+        activeIframeUrl.searchParams.set('button_border_color', input_button_border_color.value);
+        activeIframeUrl.searchParams.set('button_text_color', input_button_text_color.value);
+
+        if ("product_id" === input_source.value) {
+            product_id_container.style.display = "block"
+            activeIframeUrl.searchParams.set('product_id', input_product_id.value);
+        } else {
+            product_id_container.style.display = "none"
+            activeIframeUrl.searchParams.set('product_id', null);
+        }
+
+        activeIframe.src = activeIframeUrl.toString()
+    }
+
+    function updateElements() {
+        let activeIframeUrl = new URL(activeIframe.src);
+
+        let input_source_options_length = input_source.options.length;
+        for (let i = 0; i < input_source_options_length; i++) {
+            let option = input_source.options[i];
+            option.selected = option.value === activeIframeUrl.searchParams.get('source')
+        }
+        input_description.checked = activeIframeUrl.searchParams.get('description') === "Y";
+        input_button_text.value = activeIframeUrl.searchParams.get('button_text');
+        input_button_color.value = activeIframeUrl.searchParams.get('button_color');
+        input_button_border_color.value = activeIframeUrl.searchParams.get('button_border_color');
+        input_button_text_color.value = activeIframeUrl.searchParams.get('button_text_color');
+
+
+        if ("product_id" === input_source.value) {
+            product_id_container.style.display = "block";
+            // todo: fix
+            input_product_id.value = activeIframeUrl.searchParams.get('product_id');
+        } else {
+            product_id_container.style.display = "none"
+            // todo: fix
+            input_product_id.value = null;
+        }
+    }
+
+    updateElements();
+</script>
+</body>
+</html>

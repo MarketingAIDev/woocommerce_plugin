@@ -1,0 +1,21 @@
+.ew #avarageReview {
+
+}
+.ew #avarageReview {
+    background-color: #ffffff;
+}
+.ew .averageReview-brief-star-number {
+    background-color: #f6f8fe;
+}
+.ew .star.star-on {
+    color: #000000;
+}
+.ew .star.star-off {
+    color: #cccccc;
+}
+.ew .averageReview-detail-range {
+    background-color: gray;
+}
+.ew .averageReview-detail-range > .averageReview-detail-range-value {
+    background-color: #000000;
+}

@@ -1,0 +1,7 @@
+{
+"table_name":"customers",
+"data":
+[
+{"id":"1","uid":"5e6f619ae0870","user_id":"1","admin_id":"1","contact_id":"1","language_id":"1","first_name":"Ankit","last_name":"Srivastava","image":null,"timezone":"Asia\/Kolkata","status":"active","color_scheme":"","quota":null,"created_at":"2020-03-16 16:53:06","updated_at":"2020-06-29 22:35:05","cache":"{\"SubscriberCount\":6,\"SubscriberUsage\":0,\"SubscribedCount\":6,\"UnsubscribedCount\":0,\"UnconfirmedCount\":0,\"BlacklistedCount\":0,\"SpamReportedCount\":0,\"MailListSelectOptions\":[{\"id\":1,\"value\":\"5e80cb4e8aab8\",\"text\":\"List 1 (4 subscribers)\"},{\"id\":2,\"value\":\"5e88226cefcfe\",\"text\":\"List 2 (2 subscribers)\"},{\"id\":5,\"value\":\"5edf63d289f23\",\"text\":\"Shopify Customers: ankit-dev.myshopify.com (0 subscribers)\"},{\"id\":4,\"value\":\"5ec982845b26b\",\"text\":\"Shopify Customers: ankit-dev4.myshopify.com (0 subscribers)\"},{\"id\":6,\"value\":\"5eea1438a45d2\",\"text\":\"Shopify Customers: test.myshopify.com (0 subscribers)\"}]}","last_activity":"2020-06-29 17:05:05","text_direction":"ltr","chat_settings":"[]"}
+]
+}

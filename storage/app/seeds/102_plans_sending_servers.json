@@ -1,0 +1,6 @@
+{
+"table_name":"plans_sending_servers",
+"data":[
+{"id":"1","sending_server_id":"1","plan_id":"5","fitness":"50","created_at":"2020-03-20 22:43:49","updated_at":"2020-03-20 22:43:49","is_primary":"1"}
+]
+}

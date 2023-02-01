@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left-chat-bubble {
+            background: #F6F7FB;
+            width: 60%;
+            padding: 20px;
+            border-radius: 20px 20px 20px 0;
+            color: #696969;
+        }
+
+        .right-chat-bubble {
+            background: #50416C;
+            width: 60%;
+            padding: 20px;
+            border-radius: 20px 20px 0 20px;
+            margin-left: auto;
+            color: #D4CCE1;
+        }
+
+        .chat-bubble-time {
+            font-size: 12px;
+            padding-left: 20px;
+            padding-top: 5px;
+            color: #696969;
+        }
+
+        .chat-bubble-time.right {
+            text-align: right;
+            padding-right: 20px;
+        }
+        .chat-bubble-time > .chat-bubble-time-title {
+            font-weight: 800;
+            color: rgb(46, 46, 46);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="column full">
+                <h1 style="font-size: 20px; font-weight: bold; text-align: center;">Thanks for chatting
+                    with Geremy Lee</h1>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="column full">
+                <p style="text-align: center;">Here is your chat transcript from https://test-store.com
+                </p>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="column full" data-noedit="">
+                <div class="spacer height-60" style="height: 40px;"></div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="column full" data-noedit="">
+                <div class="left-chat-bubble">This is left chat bubble</div>
+                <div class="chat-bubble-time"><span class="chat-bubble-time-title">Jeremy</span> 1:22pm</div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="column full" data-noedit="">
+                <div class="right-chat-bubble">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sapiente fugiat suscipit dolore molestiae eos facilis sequi magni quidem voluptas eum ratione quaerat eligendi, consequatur itaque fuga cum inventore tempora?</div>
+                <div class="chat-bubble-time right"><span class="chat-bubble-time-title">You</span> 1:22pm</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

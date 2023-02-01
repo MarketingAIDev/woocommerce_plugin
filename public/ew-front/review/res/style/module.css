@@ -1,0 +1,441 @@
+.ew {
+    /**/
+
+    /* Overlay */
+
+    /* Remove the top margin from customer review, when the review is inside quickview */
+
+    /* Reveiew wizard overlay*/
+
+    /* Photo Chooser */
+
+    /* Review Submit */
+
+    /* Progressor */
+
+    /*
+      Wizard Alerts
+  */
+
+    /* Empty reviews(THere is no  Reviews) */
+
+}
+.ew .ew-btn {
+    cursor: pointer;
+    padding: 0.25rem 1rem;
+    border: solid 1px;
+    margin: 0.2rem 0.2rem;
+}
+.ew .text-smaller {
+    font-size: 0.9rem;
+}
+.ew .review-header--summary--stars {
+    margin-right: 0.5rem;
+}
+.ew .review-header--actions {
+    justify-content: flex-end;
+}
+.ew .customers-review-list {
+    margin-top: 12px;
+    width: 100%;
+    position: relative;
+}
+.ew .customer-review {
+    height: max-content;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    animation: scaleIn 0.2s;
+}
+.ew .customers-review-list .customer-review {
+    position: absolute;
+    transition: left 1s, top 1s;
+}
+.ew .customer-review--customer-picture {
+    max-width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    margin-bottom: 8px;
+}
+.ew .customer-review--details {
+    padding: 10px;
+}
+.ew .customer-review--customer-info {
+}
+.ew .customer-review--customer-verified {
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    margin-left: 8px;
+}
+.ew .customer-review--review-date {
+    font-size: 0.7rem;
+    line-height: 1;
+}
+.ew .customer-review--stars {
+    margin-bottom: 8px;
+}
+.ew .star {
+    width: max-content;
+    height: max-content;
+}
+.ew .star.large-star {
+    font-size: 1.5rem;
+}
+.ew .customer-review--title {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+.ew .customer-review--comment {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.ew .customer-review--item-type-label {
+    font-size: 1rem;
+}
+.ew .customer-review--item-type-value {
+    font-size: 0.95rem;
+}
+.ew .customers-review-nav--load-more {
+    padding: 0.5rem 1rem;
+    outline: 1px solid;
+    margin: 1rem;
+    cursor: pointer;
+}
+.ew .em-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+}
+.ew #quickview {
+    width: 100vw;
+    height: 90vh;
+}
+.ew .quikview-picture {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+@media only screen and (max-width: 800px) {
+    .ew #quickview {
+        flex-flow: column !important;
+    }
+    .ew .quikview-picture {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .ew .customer-review.quikview-review {
+        margin-top: 1rem !important;
+    }
+}
+.ew .quikview--customer-pictures {
+    height: 100%;
+}
+.ew .quikview-picture-background {
+    height: 100%;
+    width: 100%;
+    filter: blur(20px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.ew .quikview-picture-img {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+}
+.ew .fadingOverlayAnimationPlaceholder {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #ffffff;
+    animation: LoadingImageOverlayAmination 1s infinite alternate;
+}
+.ew .quikview-picture-nav {
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ew .quikview-picture-nav-btn {
+    cursor: pointer;
+    height: 100%;
+    width: 3rem;
+    animation: 0.3s fadeIn linear;
+}
+.ew .temp1 {
+    font-size: 2rem;
+    text-align: center;
+}
+.ew .customer-review.quikview-review {
+    margin-top: 0;
+    min-width: 300px;
+    border: none;
+}
+.ew .socials-img {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1.5em;
+}
+.ew .quikview-review--close {
+    height: max-content;
+    font-size: 2rem;
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+}
+.ew .review-wizard {
+    width: 100%;
+    height: 500px;
+    max-width: 600px;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+}
+.ew .review-wizard .slides {
+    height: 100%;
+}
+.ew .review-wizard .slide {
+    height: 100%;
+    width: 100%;
+}
+.ew .review-wizard .slide .slide-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.ew .review-wizard .slide .slide-subtitle {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: gray;
+}
+.ew .slide-options {
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+@media only screen and (max-width: 500px) {
+    .ew .slide-options {
+        width: 100% !important;
+    }
+}
+.ew .review-wizard .slide .slide-button {
+    width: 20rem;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: white;
+    outline: 1px solid #282828;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+.ew .review-wizard .slide .slide-button:hover {
+    background-color: #282828 !important;
+    color: white !important;
+}
+.ew .slide-button-stars {
+    display: flex;
+    margin-right: 0.5rem;
+}
+.ew .slide-options-image-list {
+    height: 300px;
+    width: 100%;
+    overflow: auto;
+}
+.ew .slide-options-image {
+    position: relative;
+    margin: 0.5rem;
+}
+.ew .slide-options-image-remove {
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    background-color: #2b2928;
+    color: #fbfdff;
+}
+.ew .slide-options-image-img {
+    width: 100px;
+    height: 150px;
+}
+.ew .slide-options-image-add {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2b2928;
+    color: white;
+    margin: 8px;
+}
+.ew .slide-input-label {
+    font-size: 1rem;
+}
+.ew .slide-input-text {
+    font-family: futura;
+    font-size: 1.5rem;
+    border: solid 1px black;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.ew .slide-input-text + .slide-input-label {
+    margin-top: 18px;
+}
+.ew .slide-input-message {
+    height: 156px;
+}
+.ew .review-submit .review-submit-fname {
+    width: 48%;
+    margin-right: 2%;
+}
+.ew .review-submit .review-submit-lname {
+    width: 48%;
+    margin-left: 2%;
+}
+.ew .review-submit .review-submit-email {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.ew .review-submit .review-submit-privacy {
+    color: grey;
+    width: 70%;
+    text-align: center;
+    margin-top: 32px;
+}
+.ew .slide-nav-options {
+    margin-top: 2rem;
+}
+.ew .review-progress {
+    width: 160px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #c7c7c7;
+    position: relative;
+}
+.ew .review-progress-filled {
+    position: absolute;
+    height: 100%;
+    width: 38%;
+    max-width: 100%;
+    border-radius: 4px;
+    background-color: #000000;
+}
+.ew .slide-nav-back,
+.ew .slide-nav-skip {
+    background: none;
+    cursor: pointer;
+}
+.ew .submitting-animation-uploading {
+    width: 100%;
+}
+.ew .submitting-progress {
+    width: 80%;
+    background-color: #c7c7c7;
+    height: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.ew .submitting-progress-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.2s;
+    background-color: #fa4f56;
+}
+.ew .submitting-error-message {
+    margin: 1rem;
+}
+.ew .review-wizard-close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 42px;
+    width: 42px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #2b2928;
+    color: #ffffff;
+    cursor: pointer;
+}
+.ew .wizard-alert-list {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.ew .wizard-alert {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    animation: wizardAlertAnimation 0.2s;
+}
+.ew .wizard-alert-icon {
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 1rem;
+}
+.ew .wizard-alert-close {
+    font-size: 1.5rem;
+    background: none;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.ew .wizard-alert-close:hover {
+    opacity: 0.8;
+}
+.ew .customers-review--noreview-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.ew .review-header--summary--count {
+    padding-right: 20px;
+    margin-bottom: 4px;
+}
+.ew .review-header--filters_select {
+    transition: background-color 0.2s linear;
+    border: solid 1px #1b1a1a;
+    padding: 14px 28px;
+    letter-spacing: 0.2em;
+    box-sizing: border-box;
+}
+.ew .review-header--filters_select:hover {
+
+}
+.ew .review-load-more_btn {
+    background: white;
+    transition: background-color 0.2s linear;
+    border: solid 1px #1b1a1a;
+    padding: 14px 28px;
+    letter-spacing: 0.2em;
+    box-sizing: border-box;
+}
+.ew .review-load-more_btn:hover {
+    background-color: #282828;
+    color: #ffffff;
+}
+.ew .averageReviewWrapper_new__write_area-button {
+    cursor: pointer;
+    background: black;
+    padding: 14px 28px;
+    letter-spacing: 0.2em;
+    color: white;
+}
+.ew .averageReviewWrapper_new__write_area-button:focus {
+    outline: none;
+}

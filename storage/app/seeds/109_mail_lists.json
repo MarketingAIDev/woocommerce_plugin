@@ -1,0 +1,6 @@
+{
+"table_name": "mail_lists",
+"data": [
+{"id":"1","uid":"607a977dc56","customer_id":"1","contact_id":"1","name":"test 1","default_subject":"test 1","from_email":"test@example.com","from_name":"Test","remind_message":null,"email_subscribe":null,"email_unsubscribe":null,"email_daily":null,"send_welcome_email":"0","unsubscribe_notification":"0","shopify_shop_id":"1","status":null,"created_at":null,"updated_at":null,"custom_order":"0","subscribe_confirmation":"0","cache":null,"all_sending_servers":"1"}
+]
+}

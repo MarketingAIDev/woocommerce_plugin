@@ -1,0 +1,27 @@
+.ew .l-inline {
+    display: inline;
+}
+.ew .l-flex {
+    display: flex;
+}
+.ew .l-flex-column {
+    flex-flow: column;
+}
+.ew .l-flex-row {
+    flex-flow: row;
+}
+.ew .l-center-hr {
+    justify-content: center;
+}
+.ew .l-center-hc {
+    align-items: center;
+}
+.ew .l-center-vr {
+    align-items: center;
+}
+.ew .l-center-vc {
+    justify-content: center;
+}
+.ew .l-center {
+    margin: auto;
+}
